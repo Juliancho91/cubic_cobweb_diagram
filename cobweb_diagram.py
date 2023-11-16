@@ -42,3 +42,9 @@ cobweb(cubic_func, -0.1, 14, title="Diagrama de telaraña", lam=-1.1, a=-0.6, b=
 cobweb(cubic_func, -0.5, 50, title="Diagrama de telaraña", lam=0, a=-0.6, b=0.6)
 
 cobweb(cubic_func, -0.99, 15, title="Diagrama de telaraña", lam=0, a=-1.1, b=1.1)
+
+#definimos otra función, en este caso 2-ciclo de la anterior:
+def cubic_func_2(x, lam):
+    return lam * ( lam * x - x**3) - ( lam * x - x**3) ** 3
+
+cobweb(cubic_func_2, 0.1, 14, title="Diagrama de telaraña 2-ciclo", lam=3, a=-2, b=2)
